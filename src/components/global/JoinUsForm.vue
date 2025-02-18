@@ -50,6 +50,7 @@
 
           <v-checkbox
             class="mt-5"
+            id="checkbox-6"
             label="I agree with terms & conditions"
             color="#D93749"
             v-model="isChecked"
