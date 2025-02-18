@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "./carousel.css";
+
+* {
+  padding: revert-layer !important;
+  margin: revert-layer !important;
+}
+
+@theme {
+  --color-primary: rgba(217, 55, 73, 1);
+  --color-secondry: rgba(0, 0, 0, 1);
+
+  --text-small: 0.875rem; /* 14px */
+
+  --spacing-xxs: 0.25rem; /* 4px */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-sm: 0.75rem; /* 12px */
+  --spacing-small: 0.875rem; /* 14px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.25rem; /* 20px */
+  --spacing-xl: 1.5rem; /* 24px */
+  --spacing-2xl: 2rem; /* 32px */
+  --spacing-3xl: 2.5rem; /* 40px */
+  --spacing-4xl: 3rem;
+  --spacing-5xl: 5rem;
+  --spacing-6xl: 6rem;
+  --spacing-7xl: 7rem;
+}
+
+/* body {
+  font-family: "Cairo", serif;
+  font-weight: 400;
+} */
+
+htm,
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
+.dialog {
+  &::backdrop {
+    backdrop-filter: blur(10px);
+  }
+}
+
+.v-navigation-drawer__scrim {
+  position: fixed !important;
+}
