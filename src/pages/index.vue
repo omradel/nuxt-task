@@ -1,16 +1,14 @@
 <template>
-  <AsyncHomeBanner />
+  <HomeBanner />
   <AsyncHomeWhyUs />
   <AsyncHomeHowWeWork />
   <AsyncHomeCourses />
 </template>
 
 <script setup>
+import { HomeBanner } from "#components";
 import { defineAsyncComponent, shallowRef } from "vue";
 
-const AsyncHomeBanner = shallowRef(
-  defineAsyncComponent(() => import("../components/home/Banner.vue"))
-);
 const AsyncHomeWhyUs = shallowRef(
   defineAsyncComponent(() => import("../components/home/WhyUs.vue"))
 );

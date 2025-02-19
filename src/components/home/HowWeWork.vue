@@ -55,6 +55,7 @@
             v-if="index != 0 && step.color == 'red'"
             src="../../assets/images/big-arrow-red.svg"
             width="100"
+            loading="lazy"
             alt=""
           />
 
@@ -62,6 +63,7 @@
             v-if="index != 0 && step.color == 'black'"
             src="../../assets/images/big-arrow-black.svg"
             width="100"
+            loading="lazy"
             alt=""
           />
         </div>

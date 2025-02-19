@@ -1,11 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
+import Compression from "vite-plugin-compression";
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
 
   srcDir: "src/",
+  ssr: true,
 
   // favicon & fonts
   app: {
@@ -27,7 +29,19 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
 
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss(),
+      Compression({
+        ext: ".gz", // or '.br' for Brotli
+        filter: (file) => file.includes("./src/assets/"), // compress assets in /src/assets/
+      }),
+    ],
+  },
+
+  nitro: {
+    prerender: {
+      routes: ["/"],
+    },
   },
 
   build: {

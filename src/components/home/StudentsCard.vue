@@ -8,6 +8,7 @@
         width="30"
         height="30"
         alt="students-card"
+        loading="lazy"
         class="xl:w-[30px] lg:w-[30px] md:w-[20px] w-[20px]"
       />
     </div>
