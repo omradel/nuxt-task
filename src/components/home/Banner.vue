@@ -1,6 +1,10 @@
 <template>
-  <div class="banner relative">
-    <div class="line-cover h-screen">
+  <div
+    class="banner bg-[url('assets/images/banner-bg.png')] bg-cover bg-no-repeat h-screen relative"
+  >
+    <div
+      class="line-cover bg-[url('assets/images/line.svg')] bg-cover bg-no-repeat h-screen"
+    >
       <Carousel v-bind="settings" :breakpoints="breakpoints1">
         <Slide
           v-for="(slide, index) in 3"
@@ -12,7 +16,9 @@
               class="grid h-screen grid-cols-1 lg:grid-cols-2 md:grid-cols-1 items-center"
             >
               <div class="text-content mt-[72px]">
-                <div class="px-4 py-2 mb-4 w-fit rounded-full banner-chip">
+                <div
+                  class="px-4 py-2 mb-4 w-fit rounded-full banner-chip bg-white/5 border border-white/10 shadow-[inset_0px_0px_12px_rgba(255,255,255,0.2)] backdrop-blur-3xl box-border"
+                >
                   <span class="text-white">Enhance your financial career</span>
                 </div>
 
@@ -84,14 +90,6 @@ const { Pagination, breakpoints1, Carousel, settings, Slide } = useCarousel();
 
 <style scoped>
 .banner {
-  height: 100vh;
-  background: url(../../assets/images/banner-bg.png) no-repeat;
-  background-size: cover;
-
-  .line-cover {
-    background: url(../../assets/images/line.svg) no-repeat;
-    background-size: cover;
-  }
   .banner-chip {
     background: rgba(255, 255, 255, 0.005);
     border: 1px solid rgba(255, 255, 255, 0.08);
